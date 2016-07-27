@@ -12,9 +12,17 @@
 
         firstImpressions.controller('ctrl', function($scope){
                 $scope.chosen = "";
-                $scope.appendToChosen = function(letter) {
-                    if (letter === "-") $scope.chosen = "";
-                    else $scope.chosen += letter;
+                $scope.selected = [false, false, false, false, false, false, false, false, false];
+                $scope.letters = ["J", "A", "S", "O", "N", "C", "H", "E", "N"];
+                $scope.appendToChosen = function(letter, pos) {
+                    if (letter === "-") {
+                        $scope.chosen = "";
+                        $scope.selected = [false, false, false, false, false, false, false, false, false];
+                    }
+                    else {
+                        $scope.chosen += letter;
+                        $scope.selected[pos] = true;
+                    }
                     console.log($scope.chosen);
                     if ($scope.chosen === "CHAOS") {
                         document.location.href = "jsonchen.html";
@@ -22,49 +30,57 @@
                 };
         });
 
+//ng-style='selected[0] ? {color:red} : {color:green}'
+
+// ng-style="selected[{{$index}}] ? {'color':'red'} : {'color':'black'}" ng-click='appendToChosen("J", $index); $event.stopPropagation();
     </script>
     <body ng-app="firstImpressions" ng-controller="ctrl">
 
         <div id="root" ng-click='appendToChosen("-")'>
-            <!-- <img src="images/cityscape.png" style='width:100%;height:100%' alt="" /> -->
+            <img src="images/mountain.jpg" style='width:100%;height:100%;position:absolute' alt="" />
 
             <div id="grid">
+                <div ng-repeat="letter in letters track by $index"
+                ng-style="selected[{{$index}}] ? {'color':'#692845'} : {'color':'black'}"
+                ng-click='appendToChosen(letter, $index); $event.stopPropagation();' class="grid-element">
+                    <span>{{letter}}</span>
+                </div>
 
-                <div class="grid-element" ng-click='appendToChosen("J"); $event.stopPropagation();'>
+                <!-- <div class="grid-element" ng-style="selected[0] ? {'color':'red'} : {'color':'black'}" ng-click='appendToChosen("J", 0); $event.stopPropagation();'>
                     <span>J</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("A"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("A", 1); $event.stopPropagation();'>
                     <span>A</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("S"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("S", 2); $event.stopPropagation();'>
                     <span>S</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("O"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("O", 3); $event.stopPropagation();'>
                     <span>O</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("N"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("N", 4); $event.stopPropagation();'>
                     <span>N</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("C"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("C", 5); $event.stopPropagation();'>
                     <span>C</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("H"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("H", 6); $event.stopPropagation();'>
                     <span>H</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("E"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("E", 7); $event.stopPropagation();'>
                     <span>E</span>
                 </div>
 
-                <div class="grid-element" ng-click='appendToChosen("N"); $event.stopPropagation();'>
+                <div class="grid-element" ng-click='appendToChosen("N", 8); $event.stopPropagation();'>
                     <span>N</span>
-                </div>
+                </div> -->
             </div>
         </div>
 
