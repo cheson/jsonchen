@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Jason Chen</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="./resources/typed.js/js/typed.js"></script>
+    </head>
+    <script>
+        var firstImpressions = angular.module('firstImpressions', []);
+
+        firstImpressions.controller('ctrl', function($scope){
+                $scope.chosen = "";
+                $scope.appendToChosen = function(letter) {
+                    if (letter === "-") $scope.chosen = "";
+                    else $scope.chosen += letter;
+                    console.log($scope.chosen);
+                    if ($scope.chosen === "CHAOS") {
+                        document.location.href = "jsonchen.html";
+                    }
+                };
+        });
+
+    </script>
+    <body ng-app="firstImpressions" ng-controller="ctrl">
+
+        <div id="root" ng-click='appendToChosen("-")'>
+            <!-- <img src="images/cityscape.png" style='width:100%;height:100%' alt="" /> -->
+
+            <div id="grid">
+
+                <div class="grid-element" ng-click='appendToChosen("J"); $event.stopPropagation();'>
+                    <span>J</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("A"); $event.stopPropagation();'>
+                    <span>A</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("S"); $event.stopPropagation();'>
+                    <span>S</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("O"); $event.stopPropagation();'>
+                    <span>O</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("N"); $event.stopPropagation();'>
+                    <span>N</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("C"); $event.stopPropagation();'>
+                    <span>C</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("H"); $event.stopPropagation();'>
+                    <span>H</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("E"); $event.stopPropagation();'>
+                    <span>E</span>
+                </div>
+
+                <div class="grid-element" ng-click='appendToChosen("N"); $event.stopPropagation();'>
+                    <span>N</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <ul>
+            <li>Jason chen, <a href="jsonchen.html">go home</a></li>
+        </ul> -->
+        <script>
+            // var app = angular.module('login', []);
+            // app.controller('testCtrl', function($scope) {
+            //     $scope.chosen = [];
+            //     $scope.appendToChosen(letter) {
+            //         $scope.chosen.push(letter);
+            //         console.log($scope.chosen);
+            //     }
+            // });
+        </script>
+
+        <script>
+        //   $(function(){
+        //       $(".grid-element").typed({
+        //         strings: ["First sentence.", "Second sentence."],
+        //         typeSpeed: 1
+        //       });
+        //   });
+        </script>
+    </body>
+</html>

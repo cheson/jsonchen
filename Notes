@@ -1,0 +1,63 @@
+Created an empty structure with components/css/images/js directories and 404/index files. Dass it!
+
+Moderizr: Modernizr tells you what HTML, CSS and JavaScript features the user’s browser has to offer.
+
+When making angular modules in separate files, make sure to include them where you're using them!
+
+---------
+Use a python server to temporarily host the website by running: python -m SimpleHTTPServer in the root directory
+http://stackoverflow.com/questions/10752055/cross-origin-requests-are-only-supported-for-http-error-when-loading-a-local
+Solves cross-origin problem which stems from browser being mad at file://
+
+OR
+
+Browsers enforce strict security permissions to prevent you from reading files out of the local file system. To develop locally, you must run a local web server rather than using file://…. Node’s http-server is recommended. To install:
+
+npm install -g http-server
+To run:
+
+http-server &
+This will start the server on http://localhost:8080 from the current working directory.
+---------
+
+For the hobbies page:
+I want many items on a white canvas background, when hovered over they zoom in and show a text explanation
+http://stackoverflow.com/questions/15757036/creating-a-zoom-effect-on-an-image-on-hover-using-css
+
+Image hover effects:
+1. https://miketricking.github.io/dist/
+2. http://hasinhayder.github.io/ImageCaptionHoverAnimation/
+
+---------
+
+july 17th
+included a d3.js library
+
+---------
+https://github.com/substack/node-browserify
+browserify does something...
+---------
+
+Typed.js is a library that can help create typed effects.
+http://www.mattboldt.com/demos/typed-js/
+
+I should have a page that shows all the anagrams of my name (along with code to generate it because we can!)
+ace-editor
+
+---------
+
+http://jsfiddle.net/dan86/jH2RZ/
+^ use this to mark letters as selected or not
+
+----
+
+SMooth page scrolling: https://css-tricks.com/examples/SmoothPageScroll/
+
+animation with delay in between.
+https://css-tricks.com/css-keyframe-animation-delay-iterations/#more-243719
+
+- animation of changing picture from black and white to color after unlocking the password.
+
+- random generator of all the bookmarked links
+
+- sliding curtain for home page after successful load https://css-tricks.com/creating-css-sliding-door-effect/

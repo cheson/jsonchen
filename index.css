@@ -1,0 +1,63 @@
+#grid{
+    width: 270px;
+}
+.grid-element{
+    width:90px;
+    height:90px;
+    float:left;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    border-radius: 4px;
+    /*margin: 5px;*/
+}
+
+.grid-element:hover{
+     background-color:#FF0000;
+}
+
+#root {
+    position:absolute;
+    z-index:0;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:#8FD8D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+span {
+    font-size: 30px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
