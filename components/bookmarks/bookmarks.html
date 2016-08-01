@@ -1,0 +1,6 @@
+<div ng-controller="BookmarksController">
+    <div ng-repeat="bookmark in bookmarks track by $index">
+        <a href="{{bookmark}}">{{bookmark}}</a>
+    </div>
+    <test-directive></test-directive>
+</div>

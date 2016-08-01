@@ -3,21 +3,25 @@ var jsonchen = angular.module('jsonchen', ['ngRoute', 'ngMaterial', 'duScroll'])
 jsonchen.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-            when('/aboutme', { //not home any more because
+            when('/aboutme', {
                 templateUrl: 'components/aboutme/aboutme.html',
                 controller: 'AboutMeController'
             }).
-            when('/hobbies', { //not home any more because
+            when('/hobbies', {
                 templateUrl: 'components/hobbies/hobbies.html',
                 controller: 'HobbiesController'
             }).
-            when('/singlePage', { //not home any more because
+            when('/singlePage', {
                 templateUrl: 'components/singlePage/singlePage.html',
                 controller: 'SinglePageController'
             }).
-            when('/d3test', { //not home any more because
+            when('/d3test', { 
                 templateUrl: 'components/d3_test/d3_test.html',
                 controller: ''
+            }).
+            when('/bookmarks', {
+                templateUrl: 'components/bookmarks/bookmarks.html',
+                controller: 'BookmarksController'
             }).
             // when('/jsonform', {
             //     templateUrl: 'components/jsonform/jsonform.html',
