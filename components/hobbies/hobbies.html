@@ -6,22 +6,26 @@
   <link rel="stylesheet/less" type="text/css" href="hobbies.less" />
 </head>
 <body> -->
+
+<!-- <div id="draggable" class="ui-widget-content">
+ <p>Drag me !!!</p>
+</div> -->
+
+    <div id="draggable" class="dragme">"Hello World!"</div>
+
     <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
         <img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt=""/>
     </a>
 
     <!-- the href can lead to a different image eg. an image of my description of the item-->
 
-    <div class="thumbnail">
-    <div class="image">
-        <img  src="http://placehold.it/320x240" alt="Some awesome text"/>
-    </div>
-    </div>
+
+        <img class="dragme" src="http://placehold.it/320x240" alt="Some awesome text"/>
 
     <div class="thumbnail">
     <div class="image">
-        <a href="../../images/fountainPen.jpg" data-lightbox="hobby" data-title="i love writing letters">
-            <img ng-src="../../images/fountainPen.jpg" alt="Photo" style="width:150px;height:150px;" ></img>
+        <a href="../../images/fountainPen.png" data-lightbox="hobby" data-title="i love writing letters">
+            <img ng-src="../../images/fountainPen.png" alt="Photo" class="pen"></img>
         </a>
     </div>
     </div>

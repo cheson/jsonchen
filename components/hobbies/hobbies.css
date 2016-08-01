@@ -23,3 +23,18 @@
     -o-transform:scale(1.25); /* Opera */
      transform:scale(1.25);
 }
+
+.pen {
+    width:150px;
+    height:150px;
+    position: absolute;
+    left: 600px;
+    top: 450px;
+}
+
+.dragme{
+          position:relative;
+          width: 270px;
+          height: 203px;
+          cursor: move;
+      }
