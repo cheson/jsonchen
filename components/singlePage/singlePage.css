@@ -1,3 +1,7 @@
+#root {
+    font-family: 'Lato', sans-serif;
+}
+
 #nav {
     position: fixed;
     width: 100%;
@@ -5,17 +9,18 @@
     background-color: #FFFFFF; opacity: 0.5; filter: alpha(opacity=50);
     top: 0px;
     border-radius: 2px;
+    border: 1px #797979 solid;
 }
 
 ul{
     list-style-type: none;
-    margin: 0;
     padding: 0;
     width: 100%;
 }
 
 li {
-    float: left;
+    float: right;
+    margin: -3px 15px 0px 5px;
 }
 
 #aboutme {
@@ -46,8 +51,6 @@ li {
     background: -o-linear-gradient(#1ABC9C, #AF7AC4); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#1ABC9C, #AF7AC4); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#1ABC9C, #AF7AC4); /* Standard syntax */
-
-    font-family: 'Lato', sans-serif;
 }
 
 #portfolio {
@@ -80,6 +83,16 @@ li {
     background: linear-gradient(#E74C3C, #F39C12); /* Standard syntax */
 }
 
+.ace_editor {
+    height: 200px;
+    width: 60%;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.ace_content {
+    padding: 10px;
+}
 
 .underline {
     text-decoration: underline;

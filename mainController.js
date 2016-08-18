@@ -1,4 +1,4 @@
-var jsonchen = angular.module('jsonchen', ['ngRoute', 'ngMaterial', 'duScroll'])
+var jsonchen = angular.module('jsonchen', ['ngRoute', 'ngMaterial', 'duScroll', 'ui.ace'])
 
 jsonchen.config(['$routeProvider',
     function ($routeProvider) {
