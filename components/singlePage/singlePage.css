@@ -2,33 +2,88 @@
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: green;
+    background-color: #FFFFFF; opacity: 0.5; filter: alpha(opacity=50);
     top: 0px;
+    border-radius: 2px;
 }
 
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 60px;
+    width: 100%;
 }
 
 li {
     float: left;
 }
 
-
-#about {
+#aboutme {
     height: 100vh;
-    background-color: red;
+
+    background: #F39C12; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F39C12, #1ABC9C); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F39C12, #1ABC9C); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F39C12, #1ABC9C); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F39C12, #1ABC9C); /* Standard syntax */
+}
+
+#aboutme {
+    height: 100vh;
+
+    background: #F39C12; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F39C12, #1ABC9C); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F39C12, #1ABC9C); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F39C12, #1ABC9C); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F39C12, #1ABC9C); /* Standard syntax */
+}
+
+#aboutjson {
+    height: 100vh;
+
+    background: #1ABC9C; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1ABC9C, #AF7AC4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1ABC9C, #AF7AC4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1ABC9C, #AF7AC4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1ABC9C, #AF7AC4); /* Standard syntax */
+
+    font-family: 'Lato', sans-serif;
 }
 
 #portfolio {
     height: 100vh;
-    background-color: blue;
+
+    background: #AF7AC4; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#AF7AC4, #3498DB); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#AF7AC4, #3498DB); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#AF7AC4, #3498DB); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#AF7AC4, #3498DB); /* Standard syntax */
 }
 
 #contact {
     height: 100vh;
-    background-color: white;
+
+    background: #3498DB; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#3498DB, #E74C3C); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3498DB, #E74C3C); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3498DB, #E74C3C); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#3498DB, #E74C3C); /* Standard syntax */
+}
+
+#bottomExtra {
+    height: 100vh;
+
+    background: #E74C3C; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#E74C3C, #F39C12); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#E74C3C, #F39C12); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#E74C3C, #F39C12); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#E74C3C, #F39C12); /* Standard syntax */
+}
+
+
+.underline {
+    text-decoration: underline;
+    /*text-decoration-color: white;
+    -webkit-text-decoration-color: white;
+    -moz-text-decoration-color: white; /* Code for Firefox */*/
 }

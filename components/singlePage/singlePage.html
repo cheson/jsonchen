@@ -3,15 +3,28 @@
          <!-- <button>About</button>
          <button>Portfolio</button>
          <button>Contact</button> -->
-         <li><button ng-click='smoothScrollTo("about")'>about</button></li>
-         <li><button ng-click='smoothScrollTo("portfolio")'>portfolio</button></li>
-         <li><button ng-click='smoothScrollTo("contact")'>contact</button></li>
+         <li><a ng-click='smoothScrollTo("aboutme")'>about me</a></li>
+         <li><a ng-click='smoothScrollTo("aboutjson")'>about json</a></li>
+         <li><a ng-click='smoothScrollTo("portfolio")'>portfolio</a></li>
+         <li><a ng-click='smoothScrollTo("contact")'>contact</a></li>
      </ul>
 </div>
 
-<div id="about">
+<div id="aboutme">
+    <div style="height:50px"></div>
   <!-- <a id="about" class="smooth"></a> -->
-    About page content goes here.
+    About me page content goes here.
+</div>
+
+<div id="aboutjson">
+  <!-- <a id="about" class="smooth"></a> -->
+    <span style="font-size:10vh;">
+        JSON.
+        What is it?
+        Jibber jabber.
+        <span class="underline">J</span>ava<span class="underline">S</span>cript
+        <span class="underline">O</span>bject <span class="underline">N</span>otation.
+    </span>
 </div>
 
 <div id="portfolio">
@@ -22,6 +35,10 @@
 <div id="contact">
   <!-- <a id="contact" class="smooth"></a> -->
     Contact page content goes here.
+</div>
+
+<div id="bottomExtra">
+    lala
 </div>
 
 <!-- <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>

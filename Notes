@@ -70,3 +70,6 @@ ONE PAGE SCROLL: https://github.com/peachananr/onepage-scroll
 http://www.thepetedesign.com/demos/onepage_scroll_demo.html
 
 TO TRY: https://www.sitepoint.com/deploy-rest-api-in-30-mins-mlab-heroku/?utm_source=sitepoint&utm_medium=relatedsidebar&utm_term=javascript
+
+--
+adding gradients, put the following in css: background: linear-gradient(direction, color-stop1, color-stop2, ...);

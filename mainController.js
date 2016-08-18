@@ -15,7 +15,7 @@ jsonchen.config(['$routeProvider',
                 templateUrl: 'components/singlePage/singlePage.html',
                 controller: 'SinglePageController'
             }).
-            when('/d3test', { 
+            when('/d3test', {
                 templateUrl: 'components/d3_test/d3_test.html',
                 controller: ''
             }).
