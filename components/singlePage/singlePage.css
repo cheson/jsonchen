@@ -10,6 +10,12 @@
     top: 0px;
     border-radius: 2px;
     border: 1px #797979 solid;
+    z-index: 10;
+}
+
+a:hover {
+    background-color: #FFFFFF; opacity: 0.8; filter: alpha(opacity=80);;
+    font-weight: bold;
 }
 
 ul{
