@@ -38,7 +38,7 @@
 
             <div id="grid">
                 <div ng-repeat="letter in letters track by $index"
-                ng-style="selected[{{$index}}] ? {'color':'#692845'} : {'color':'black'}"
+                ng-style="selected[{{$index}}] ? {'color':'#692845', 'font-weight':'bold'} : {'color':'black'}"
                 ng-click='appendToChosen(letter, $index); $event.stopPropagation();' class="grid-element">
                     <span>{{letter}}</span>
                 </div>
