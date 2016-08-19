@@ -1,4 +1,4 @@
-#root {
+#singlepage {
     font-family: 'Lato', sans-serif;
 }
 
@@ -13,18 +13,18 @@
     z-index: 10;
 }
 
-a:hover {
+#singlepage a:hover {
     background-color: #FFFFFF; opacity: 0.8; filter: alpha(opacity=80);;
     font-weight: bold;
 }
 
-ul{
+#singlepage ul{
     list-style-type: none;
     padding: 0;
     width: 100%;
 }
 
-li {
+#singlepage li {
     float: right;
     margin: -3px 15px 0px 5px;
 }

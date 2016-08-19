@@ -1,10 +1,14 @@
+#hobbies {
+    height: 300vh;
+}
+
 .thumbnail {
     width: 120px;
     height: 10px;
     border: solid;
 }
 
-img {
+#hobbies img {
     -webkit-transition: all 0.75s ease; /* Safari and Chrome */
     -moz-transition: all 0.75s ease; /* Firefox */
     -ms-transition: all 0.75s ease; /* IE 9 */
@@ -12,7 +16,7 @@ img {
     transition: all 0.75s ease;
 }
 
-img:hover {
+#hobbies img:hover {
     -webkit-animation: animation 1000ms linear both;
     animation: animation 1000ms linear both;
 
@@ -47,6 +51,20 @@ img:hover {
     top: 350px;
 }
 
+.dough {
+    zoom: 30%;
+    position: absolute;
+    left: 150px;
+    top: 350px;
+}
+
+.RaM {
+    zoom: 35%;
+    position: absolute;
+    right: 300px;
+    top: 250px;
+}
+
 .dragme{
     position:relative;
     width: 270px;
@@ -54,7 +72,25 @@ img:hover {
     cursor: move;
 }
 
-
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
 
 .animation-target {
   -webkit-animation: animation 1000ms linear both;
@@ -62,7 +98,6 @@ img:hover {
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/y3FSYm */
-
 
 
 .animation-target {

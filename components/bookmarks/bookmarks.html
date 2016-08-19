@@ -1,9 +1,14 @@
-<div style="font-size:100px">Book<img ng-src="../../images/bookM.png" alt="M"/>arks</div>
-
+<span style="text-align: center;">
+<div style="font-size:100px;">Book<img style="zoom:80%; margin-bottom: -50px" ng-src="../../images/bookM.png" alt="M"/>arks</div>
+<br><br><br>
 <div ng-controller="BookmarksController">
-    <div ng-repeat="bookmark in bookmarks track by $index">
-        <a href="{{bookmark}}">{{bookmark}}</a>
+
+    <div class="columns">
+        <div style="border:solid;" ng-repeat="bookmark in bookmarks">
+            <a href="{{bookmark}}">{{bookmark}}</a>
+        </div>
     </div>
+
     <test-directive></test-directive>
 </div>
 
@@ -20,3 +25,5 @@ warning another window will open
 <div ng-controller="BookmarksController">
     <button type="button" ng-click="selectRandomLink()">select random link!</button>
 </div>
+
+</span>
