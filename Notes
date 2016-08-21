@@ -73,3 +73,9 @@ TO TRY: https://www.sitepoint.com/deploy-rest-api-in-30-mins-mlab-heroku/?utm_so
 
 --
 adding gradients, put the following in css: background: linear-gradient(direction, color-stop1, color-stop2, ...);
+--
+LESS
+http://verekia.com/less-css/dont-read-less-css-tutorial-highly-addictive/
+use lessc style.less > style.css to compile less files
+(can we write a unix/bash function that calls this on all less files in the directory and subdirectory? hopefully)
+--
