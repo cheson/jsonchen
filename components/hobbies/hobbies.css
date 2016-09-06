@@ -8,6 +8,12 @@
     border: solid;
 }
 
+/*img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}*/
+
 #hobbies img {
     -webkit-transition: all 0.75s ease; /* Safari and Chrome */
     -moz-transition: all 0.75s ease; /* Firefox */

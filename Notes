@@ -78,4 +78,14 @@ LESS
 http://verekia.com/less-css/dont-read-less-css-tutorial-highly-addictive/
 use lessc style.less > style.css to compile less files
 (can we write a unix/bash function that calls this on all less files in the directory and subdirectory? hopefully)
+lol or just use this: https://atom.io/packages/less-autocompile
+
+https://codemyviews.com/blog/10-less-css-examples-you-should-steal-for-your-projects
 --
+Turn.js
+
+http://www.turnjs.com/
+Use this for projects, gallery, blog posts, but really for the bookmarks
+--
+
+this is really fun because i get to play around and practice a bunch of different tools yay!

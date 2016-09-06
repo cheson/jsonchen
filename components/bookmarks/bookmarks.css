@@ -1,3 +1,15 @@
-.columns {
-    columns: 2;
+.ellipses {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.vertical_line {
+  width: 2px;
+  background: #DDDDDD;
+}
+.textbox {
+  background: #E2E2E2;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  font-size: 20px;
 }

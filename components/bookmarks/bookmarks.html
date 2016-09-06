@@ -1,29 +1,46 @@
-<span style="text-align: center;">
+<div style="text-align: center; margin-top: 20px">
 <div style="font-size:100px;">Book<img style="zoom:80%; margin-bottom: -50px" ng-src="../../images/bookM.png" alt="M"/>arks</div>
 <br><br><br>
-<div ng-controller="BookmarksController">
 
-    <div class="columns">
-        <div style="border:solid;" ng-repeat="bookmark in bookmarks">
-            <a href="{{bookmark}}">{{bookmark}}</a>
-        </div>
-    </div>
-
-    <test-directive></test-directive>
-</div>
-
+<div class="textbox" style="width: 70vw; margin:0 auto; padding: 30px; text-align: left">
 I thought about grouping these into categories, but my life isn't defined by the categories of all the things I love
 and am interested in. These things all tie together and influence each other in ways that I cannot explain. The order
 that these come in is just as chaotic as my actual interests.
-
+<br><br>
 put the book marks in an array
 clicking on a button will generate 100 random numbers, spin through those 99 numbers and show the last one.
 Use that number as the index in the array and open that link.
 window.open("http://www.w3schools.com");
-<br/>
-warning another window will open
-<div ng-controller="BookmarksController">
-    <button type="button" ng-click="selectRandomLink()">select random link!</button>
 </div>
 
-</span>
+<br><br>
+<md-button ng-show="!loading" class="md-raised" ng-click="selectRandomLink()">select random link!</md-button>
+<md-progress-circular style="margin-left:-40px; margin-bottom:40px" md-diameter="40px" ng-show="loading" md-mode="indeterminate"></md-progress-circular>
+<div style="height: 0.5vw" ng-show="loading"></div>
+<br><br>
+
+<div style="width: 70vw; margin:0 auto;" ng-controller="BookmarksController">
+	<div layout="row">
+  		<div flex>
+  			<div layout="column">
+  				<div class="ellipses" style="margin-right: 5%" flex ng-repeat="bookmark in bookmarksOne" ng-mouseenter="showBookmark[bookmark] = false" ng-mouseleave="showBookmark[bookmark] = true"> 
+					<img src="https://www.google.com/s2/favicons?domain_url={{bookmark}}">
+  					<a ng-show="showBookmark[bookmark]" target="_blank" href="{{bookmark}}">{{bookmarks[bookmark]}}</a>
+  					<a ng-show="!showBookmark[bookmark]" target="_blank" href="{{bookmark}}">{{bookmark}}</a> 
+  				</div>
+			</div>
+		</div>
+		<div class="vertical_line" style="height: {{bookmarksTwo.length * 1.2}}em"></div>
+  		<div flex>
+  			<div layout="column">
+  				<div class="ellipses" style="margin-left: 5%" flex ng-repeat="bookmark in bookmarksTwo" ng-mouseenter="showBookmark[bookmark] = false" ng-mouseleave="showBookmark[bookmark] = true"> 
+  					<img src="https://www.google.com/s2/favicons?domain_url={{bookmark}}">
+  					<a ng-show="showBookmark[bookmark]" target="_blank" href="{{bookmark}}">{{bookmarks[bookmark]}}</a>
+  					<a ng-show="!showBookmark[bookmark]" target="_blank" href="{{bookmark}}">{{bookmark}}</a> 
+  				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
