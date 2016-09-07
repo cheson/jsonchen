@@ -172,17 +172,48 @@ jsonchen.controller('BookmarksController', ['$scope', '$timeout',
             "https://www.smashingmagazine.com/2014/07/dont-be-scared-of-functional-programming/": "Don't Be Scared Of Functional Programming - Smashing Magazine",
             "http://matadornetwork.com/bnt/30-amazing-resources-reading-learning-spanish/": "30+ amazing resources for reading (and learning!) Spanish"
         };
-        $scope.bmLinks = Object.keys($scope.bookmarks);
-        $scope.bookmarksOne = [];
-        $scope.bookmarksTwo = [];
-        $scope.showBookmark = [];
 
-        for (let i = 0; i < $scope.bmLinks.length; i++) { 
-            let bm = $scope.bmLinks[i];
-            let des = $scope.bookmarks[bm];
-            (i % 2 === 0) ? $scope.bookmarksOne.push(bm) : $scope.bookmarksTwo.push(bm); 
-            $scope.showBookmark[bm] = true;
+        $scope.$watch('bookmarks', function() {
+            $scope.bmLinks = Object.keys($scope.bookmarks);
+            $scope.bookmarksOne = [];
+            $scope.bookmarksTwo = [];
+            $scope.showBookmark = [];
+            for (let i = 0; i < $scope.bmLinks.length; i++) { 
+                let bm = $scope.bmLinks[i];
+                let des = $scope.bookmarks[bm];
+                (i % 2 === 0) ? $scope.bookmarksOne.push(bm) : $scope.bookmarksTwo.push(bm); 
+                $scope.showBookmark[bm] = true;
+            };
+        });
+
+        $scope.sortByDescription = function() {
+            var sortable = [];
+            for (var bm in $scope.bookmarks)
+                sortable.push([bm, $scope.bookmarks[bm]])
+            sortable.sort(function(a,b) {
+                return a[1].localeCompare(b[1]);
+            })
+            console.log("sortable", sortable);
+            $scope.bookmarks = {};
+            sortable.forEach((pair) => {
+                console.log("pair", pair);
+                $scope.bookmarks[pair[0]] = pair[1];
+            })
+            console.log($scope.bookmarks);
         };
+
+// var maxSpeed = {
+//     car:300, bike:60, motorbike:200, airplane:1000,
+//     helicopter:400, rocket:8*60*60
+// }
+// var sortable = [];
+// for (var vehicle in maxSpeed)
+//       sortable.push([vehicle, maxSpeed[vehicle]])
+// sortable.sort(
+//     function(a, b) {
+//         return a[1] - b[1]
+//     }
+// )
 
         function getDomain(url) {
             let match = url.match(/:\/\/(.[^/]+)/)[1];

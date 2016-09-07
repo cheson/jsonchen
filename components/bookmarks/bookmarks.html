@@ -1,9 +1,10 @@
 <div style="text-align: center; margin-top: 20px">
 <div style="font-size:100px;">Book<img style="zoom:80%; margin-bottom: -50px" ng-src="../../images/bookM.png" alt="M"/>arks</div>
 <br><br><br>
+<md-button class="md-raised" ng-click="sortByDescription()">sort by description</md-button>
 
 <div class="textbox" style="width: 80vw; margin:0 auto; padding: 30px; text-align: left">
-I thought about grouping these into categories, but my life isn't defined by the categories of all the things I love
+<span class="firstcharacter">I</span> thought about grouping these into categories, but my life isn't defined by the categories of all the things I love
 and am interested in. These things all tie together and influence each other in ways that I cannot explain. The order
 that these come in is just as chaotic as my actual interests.
 <br><br>
@@ -20,7 +21,7 @@ Feel free to browse or let me choose a random link for you!
 <div style="height: 0.5vw" ng-show="loading"></div>
 <br><br>
 
-<div style="width: 80vw; margin:0 auto;" ng-controller="BookmarksController">
+<div style="width: 80vw; margin:0 auto;">
 	<div layout="row" style = "text-align: left">
   		<div flex>
   			<div layout="column">
