@@ -1,25 +1,23 @@
 <div style="text-align: center; margin-top: 20px">
 <div style="font-size:100px;">Book<img style="zoom:80%; margin-bottom: -50px" ng-src="../../images/bookM.png" alt="M"/>arks</div>
 <br><br><br>
-<md-button class="md-raised" ng-click="sortByDescription()">sort by description</md-button>
-
 <div class="textbox" style="width: 80vw; margin:0 auto; padding: 30px; text-align: left">
-<span class="firstcharacter">I</span> thought about grouping these into categories, but my life isn't defined by the categories of all the things I love
-and am interested in. These things all tie together and influence each other in ways that I cannot explain. The order
-that these come in is just as chaotic as my actual interests.
+<span class="firstcharacter">O</span>ver the past couple years, I've collected a myriad of bookmarks in my browser. Some are hastily saved links to assignments long forgotten, but many are articles, videos, and other pieces that struck a chord, and I bookmarked them for the chance to revisit them in the future. They inspired and enlightened me, made me laugh and cry. They range in topics - immigration, foreign langauge, comedy, linear algebra, adventure, class disparity, just to name a few. I'm sharing them because I hope you too can find something interesting, but also because I hope it can give you a glimpse of who I am and what I care about.
 <br><br>
-put the book marks in an array
-clicking on a button will generate 100 random numbers, spin through those 99 numbers and show the last one.
-Use that number as the index in the array and open that link.
-window.open("http://www.w3schools.com");
-Feel free to browse or let me choose a random link for you! 
+The idea comes from an article last year titled <a target="_blank" href="http://time.com/3663775/facebook-likes-personality/">"Here’s Proof That Facebook Knows You Better Than Your Friends
+"</a> that described a study showing Facebook predicting a person's personality, beliefs, and values much, much better than even closest friends and family. One of the primary indicators they used is the data from what posts you've liked and shared, and using that they can build a very powerful and close approximation of who you are. 
+<br><br>
+That said, feel free to take a look, or click below to allow me to choose a site for you! I hope you find something worth your time. <span style="position: relative; top: 0.2em"><i class="material-icons">sentiment_very_satisfied</i></span>
+<br>
 </div>
 
-<br><br>
-<md-button ng-show="!loading" class="md-raised" ng-click="selectRandomLink()">select random link!</md-button>
-<md-progress-circular style="margin-left:-40px; margin-bottom:40px" md-diameter="40px" ng-show="loading" md-mode="indeterminate"></md-progress-circular>
+<br>
+<md-button ng-show="!loading" class="md-raised" style="color: #79A21D" ng-click="selectRandomLink()">select random link!</md-button>
+<md-progress-circular style="margin-left:-40px; margin-bottom:40px;" md-diameter="40px" ng-show="loading" md-mode="indeterminate"></md-progress-circular>
 <div style="height: 0.5vw" ng-show="loading"></div>
-<br><br>
+<br>
+<md-button class="md-raised" style="color: #79A21D" ng-click="sortBookmarks()">{{sortedBy === "DATE" ? "sort alphabetically" : "sort by date added"}}</md-button>
+<br><br><br>
 
 <div style="width: 80vw; margin:0 auto;">
 	<div layout="row" style = "text-align: left">

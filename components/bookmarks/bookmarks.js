@@ -1,6 +1,6 @@
 jsonchen.controller('BookmarksController', ['$scope', '$timeout',
     function ($scope, $timeout) {
-        $scope.bookmarks = {
+        $scope.bookmarksByDate = {
             "https://stackoverflow.com/questions/4202161/google-account-logout-and-redirect?newreg=9d0ba67d33724493ac564675d254d8cd": "openid - google account logout and redirect - Stack Overflow",
             "http://www.nytimes.com/2015/03/01/opinion/sunday/how-we-learned-to-kill.html?src=me&assetType=opinion&assetType=opinion&_r=0&gwh=EE2FD62FAC78EAC6F5F4244A41064A4F&gwt=pay&assetType=opinion": "How We Learned to Kill - NYTimes.com",
             "http://chronicle.com/article/What-Are-You-Going-to-Do-With/124651/": "What Are You Going to Do With That? - The Chronicle Review - The Chronicle of Higher Education",
@@ -173,6 +173,8 @@ jsonchen.controller('BookmarksController', ['$scope', '$timeout',
             "http://matadornetwork.com/bnt/30-amazing-resources-reading-learning-spanish/": "30+ amazing resources for reading (and learning!) Spanish"
         };
 
+        $scope.bookmarks = $scope.bookmarksByDate;
+
         $scope.$watch('bookmarks', function() {
             $scope.bmLinks = Object.keys($scope.bookmarks);
             $scope.bookmarksOne = [];
@@ -186,34 +188,35 @@ jsonchen.controller('BookmarksController', ['$scope', '$timeout',
             };
         });
 
-        $scope.sortByDescription = function() {
+        $scope.sortedBy = "DATE";
+
+        function sortByDescription() {
             var sortable = [];
             for (var bm in $scope.bookmarks)
                 sortable.push([bm, $scope.bookmarks[bm]])
             sortable.sort(function(a,b) {
                 return a[1].localeCompare(b[1]);
             })
-            console.log("sortable", sortable);
             $scope.bookmarks = {};
             sortable.forEach((pair) => {
-                console.log("pair", pair);
                 $scope.bookmarks[pair[0]] = pair[1];
             })
-            console.log($scope.bookmarks);
-        };
+            $scope.sortedBy = "DESCRIPTION";
+        }
 
-// var maxSpeed = {
-//     car:300, bike:60, motorbike:200, airplane:1000,
-//     helicopter:400, rocket:8*60*60
-// }
-// var sortable = [];
-// for (var vehicle in maxSpeed)
-//       sortable.push([vehicle, maxSpeed[vehicle]])
-// sortable.sort(
-//     function(a, b) {
-//         return a[1] - b[1]
-//     }
-// )
+        function sortByDate() {
+            $scope.bookmarks = $scope.bookmarksByDate;
+            $scope.sortedBy = "DATE";
+        }
+
+
+        $scope.sortBookmarks = function() {
+            if ($scope.sortedBy === "DATE") {
+                  sortByDescription();
+            } else {
+                  sortByDate();
+            }
+        };
 
         function getDomain(url) {
             let match = url.match(/:\/\/(.[^/]+)/)[1];
